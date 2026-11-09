@@ -1,0 +1,686 @@
+[
+  {
+    "id": "prod-001",
+    "name": "iPhone 15 Pro Max",
+    "price": 1199,
+    "category": "iPhone",
+    "brand": "Apple",
+    "images": [
+      "assets/images/iphone-15-pro-max.jpg",
+      "assets/images/iphone-15-pro-max-2.jpg",
+      "assets/images/iphone-15-pro-max-3.jpg",
+      "assets/images/iphone-15-pro-max-4.jpg",
+      "assets/images/iphone-15-pro-max-5.jpg"
+    ],
+    "specs": {
+      "cpu": "A17 Pro chip",
+      "ram": "8 GB",
+      "storage": "256 GB"
+    },
+      "variants": [
+      { "ram": "8 GB", "storage": "256 GB", "price": 1199 },
+      { "ram": "8 GB", "storage": "512 GB", "price": 1399 },
+      { "ram": "8 GB", "storage": "1 TB", "price": 1599 }
+    ],
+    "colors": [
+      { "id": "natural-titanium", "name": "Натуральний титан", "hex": "#aba69f", "image": "assets/images/iphone-15-pro-max/natural-titanium.webp" },
+      { "id": "blue-titanium",    "name": "Синій титан",        "hex": "#2f4452", "image": "assets/images/iphone-15-pro-max/blue-titanium.webp" },
+      { "id": "white-titanium",   "name": "Білий титан",        "hex": "#f2f1ed", "image": "assets/images/iphone-15-pro-max/white-titanium.webp" },
+      { "id": "black-titanium",   "name": "Чорний титан",       "hex": "#3b3c3e", "image": "assets/images/iphone-15-pro-max/black-titanium.webp" }
+    ],
+    "rating": 4.9,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-002",
+    "name": "iPhone 17 Pro",
+    "price": 1199,
+    "category": "iPhone",
+    "brand": "Apple",
+    "images": [
+      "assets/images/iphone-17-pro.jpg",
+      "assets/images/iphone-17-pro-2.jpg",
+      "assets/images/iphone-17-pro-3.jpg",
+      "assets/images/iphone-17-pro-4.jpg"
+    ],
+    "specs": {
+      "cpu": "A19 Pro chip",
+      "ram": "12 GB",
+      "storage": "256 GB"
+    },
+    "variants": [
+      { "ram": "12 GB", "storage": "256 GB", "price": 1199 },
+      { "ram": "12 GB", "storage": "512 GB", "price": 1399 },
+      { "ram": "12 GB", "storage": "1 TB", "price": 1599 }
+    ],
+    "colors": [
+      { "id": "silver",        "name": "Сріблястий",          "hex": "#e3e4e6", "image": "assets/images/iphone-17-pro/silver.webp" },
+      { "id": "deep-blue",     "name": "Темно-синій",         "hex": "#2f3a4f", "image": "assets/images/iphone-17-pro/deep-blue.webp" },
+      { "id": "cosmic-orange", "name": "Космічний помаранчевий", "hex": "#d9772f", "image": "assets/images/iphone-17-pro/cosmic-orange.webp" }
+    ],
+    "rating": 4.9,
+    "year": 2026,
+    "available": true
+  },
+  {
+    "id": "prod-003",
+    "name": "iPhone 15",
+    "price": 799,
+    "category": "iPhone",
+    "brand": "Apple",
+    "images": [
+      "assets/images/iphone-15.jpg",
+      "assets/images/iphone-15-2.jpg",
+      "assets/images/iphone-15-3.jpg",
+      "assets/images/iphone-15-4.jpg",
+      "assets/images/iphone-15-5.jpg",
+      "assets/images/iphone-15-6.jpg"
+    ],
+    "specs": {
+      "cpu": "A16 Bionic chip",
+      "ram": "6 GB",
+      "storage": "128 GB"
+    },
+    "variants": [
+      { "ram": "6 GB", "storage": "128 GB", "price": 799 },
+      { "ram": "6 GB", "storage": "256 GB", "price": 899 },
+      { "ram": "6 GB", "storage": "512 GB", "price": 999 }
+    ],
+    "colors": [
+      { "id": "black",  "name": "Чорний",   "hex": "#3c3d3a", "image": "assets/images/iphone-15/black.webp" },
+      { "id": "white",   "name": "Білий", "hex": "#ffffff", "image": "assets/images/iphone-15/white.webp" },
+      { "id": "green",  "name": "Зелений",  "hex": "#e2ecc8", "image": "assets/images/iphone-15/green.webp" },
+      { "id": "yellow", "name": "Жовтий",   "hex": "#fef4c7", "image": "assets/images/iphone-15/yellow.webp" },
+      { "id": "pink",   "name": "Рожевий",  "hex": "#fae0e4", "image": "assets/images/iphone-15/pink.webp" }
+    ],
+    "rating": 4.8,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-004",
+    "name": "iPhone 17",
+    "price": 959,
+    "category": "iPhone",
+    "brand": "Apple",
+    "images": [
+      "assets/images/iphone-17.jpg",
+      "assets/images/iphone-17-2.jpg",
+      "assets/images/iphone-17-3.jpg",
+      "assets/images/iphone-17-4.jpg",
+      "assets/images/iphone-17-5.jpg",
+      "assets/images/iphone-17-6.jpg"
+    ],
+    "specs": {
+      "cpu": "A19 chip",
+      "ram": "8 GB",
+      "storage": "256 GB"
+    },
+    "variants": [
+      { "ram": "8 GB", "storage": "256 GB", "price": 959 },
+      { "ram": "8 GB", "storage": "512 GB", "price": 1159 }
+    ],
+    "colors": [
+      { "id": "black",     "name": "Чорний",            "hex": "#232426", "image": "assets/images/iphone-17/black.webp" },
+      { "id": "white",     "name": "Білий",             "hex": "#fafafa", "image": "assets/images/iphone-17/white.webp" },
+      { "id": "mist-blue", "name": "Ніжний блакитний",  "hex": "#cbdce8", "image": "assets/images/iphone-17/mist-blue.webp" },
+      { "id": "sage",      "name": "Шавлієвий зелений", "hex": "#b4c3b1", "image": "assets/images/iphone-17/sage.webp" },
+      { "id": "lavender",  "name": "Лавандовий",        "hex": "#d3cbdf", "image": "assets/images/iphone-17/lavender.webp" }
+    ],
+    "rating": 4.7,
+    "year": 2026,
+    "available": true
+  },
+  {
+    "id": "prod-005",
+    "name": "iPad Pro 12.9-inch (M2)",
+    "price": 1099,
+    "category": "iPad",
+    "brand": "Apple",
+    "images": [
+      "assets/images/ipad-pro-12.9.jpg",
+      "assets/images/ipad-pro-12.9-2.jpg",
+      "assets/images/ipad-pro-12.9-3.jpg"
+    ],
+    "specs": {
+      "cpu": "M2 chip",
+      "ram": "8 GB",
+      "storage": "128 GB"
+    },
+    "variants": [
+      { "ram": "8 GB", "storage": "128 GB", "price": 1099 },
+      { "ram": "8 GB", "storage": "256 GB", "price": 1299 },
+      { "ram": "8 GB", "storage": "512 GB", "price": 1499 },
+      { "ram": "16 GB", "storage": "1 TB", "price": 1699 },
+      { "ram": "16 GB", "storage": "2 TB", "price": 1899 }
+    ],
+    "colors": [
+      { "id": "space-gray", "name": "Космічний сірий", "hex": "#4e4f52", "image": "assets/images/ipad-pro-12-9-2022/space-gray.webp" },
+      { "id": "silver",     "name": "Сріблястий",      "hex": "#e3e4e6", "image": "assets/images/ipad-pro-12-9-2022/silver.webp" }
+    ],
+    "rating": 4.9,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-006",
+    "name": "iPad Air (M1)",
+    "price": 599,
+    "category": "iPad",
+    "brand": "Apple",
+    "images": [
+      "assets/images/ipad-air.jpg",
+      "assets/images/ipad-air-2.jpg",
+      "assets/images/ipad-air-3.jpg",
+      "assets/images/ipad-air-4.jpg",
+      "assets/images/ipad-air-5.jpg",
+      "assets/images/ipad-air-6.jpg"
+    ],
+    "specs": {
+      "cpu": "M1 chip",
+      "ram": "8 GB",
+      "storage": "64 GB"
+    },
+    "variants": [
+      { "ram": "8 GB", "storage": "64 GB", "price": 599 },
+      { "ram": "8 GB", "storage": "256 GB", "price": 799 }
+    ],
+    "colors": [
+      { "id": "space-gray", "name": "Космічний сірий", "hex": "#535456", "image": "assets/images/ipad-air-m1/space-gray.webp" },
+      { "id": "starlight",  "name": "Зіркове сяйво",   "hex": "#e7e4dc", "image": "assets/images/ipad-air-m1/starlight.webp" },
+      { "id": "blue",       "name": "Блакитний",       "hex": "#a3b8cc", "image": "assets/images/ipad-air-m1/blue.webp" },
+      { "id": "purple",     "name": "Фіолетовий",     "hex": "#bfc0dc", "image": "assets/images/ipad-air-m1/purple.webp" },
+      { "id": "pink",       "name": "Рожевий",        "hex": "#e9c9c3", "image": "assets/images/ipad-air-m1/pink.webp" }
+    ],
+    "rating": 4.8,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-007",
+    "name": "iPad mini (6th Gen)",
+    "price": 499,
+    "category": "iPad",
+    "brand": "Apple",
+    "images": [
+      "assets/images/ipad-mini.jpg",
+      "assets/images/ipad-mini-2.jpg",
+      "assets/images/ipad-mini-3.jpg",
+      "assets/images/ipad-mini-4.jpg"
+    ],
+    "specs": {
+      "cpu": "A15 Bionic chip",
+      "ram": "4 GB",
+      "storage": "64 GB"
+    },
+    "variants": [
+      { "ram": "4 GB", "storage": "64 GB", "price": 499 },
+      { "ram": "4 GB", "storage": "256 GB", "price": 699 }
+    ],
+    "colors": [
+      { "id": "space-gray", "name": "Космічний сірий", "hex": "#535456", "image": "assets/images/ipad-mini-6/space-gray.webp" },
+      { "id": "starlight",  "name": "Зіркове сяйво",   "hex": "#e7e4dc", "image": "assets/images/ipad-mini-6/starlight.webp" },
+      { "id": "purple",     "name": "Фіолетовий",      "hex": "#b0aebd", "image": "assets/images/ipad-mini-6/purple.webp" },
+      { "id": "pink",       "name": "Рожевий",         "hex": "#e8c3bf", "image": "assets/images/ipad-mini-6/pink.webp" }
+    ],
+    "rating": 4.7,
+    "year": 2021,
+    "available": true
+  },
+  {
+    "id": "prod-008",
+    "name": "MacBook Air (M2)",
+    "price": 1199,
+    "category": "Mac",
+    "brand": "Apple",
+    "images": [
+      "assets/images/macbook-air-m2.jpg",
+      "assets/images/macbook-air-m2-2.jpg",
+      "assets/images/macbook-air-m2-3.jpg"
+    ],
+    "specs": {
+      "cpu": "M2 chip",
+      "ram": "8 GB",
+      "storage": "256 GB"
+    },
+    "variants": [
+      { "ram": "8 GB", "storage": "256 GB", "price": 1199 },
+      { "ram": "16 GB", "storage": "256 GB", "price": 1299 },
+      { "ram": "8 GB", "storage": "512 GB", "price": 1399 },
+      { "ram": "16 GB", "storage": "512 GB", "price": 1499 },
+      { "ram": "16 GB", "storage": "1 TB", "price": 1599 },
+      { "ram": "24 GB", "storage": "1 TB", "price": 1699 },
+      { "ram": "16 GB", "storage": "2 TB", "price": 1799 },
+      { "ram": "24 GB", "storage": "2 TB", "price": 1899 }
+    ],
+    "colors": [
+      { "id": "midnight",   "name": "Темна ніч",       "hex": "#2e3641", "image": "assets/images/macbook-air-m2/midnight.webp" },
+      { "id": "starlight",  "name": "Зіркове сяйво",   "hex": "#f0e4d3", "image": "assets/images/macbook-air-m2/starlight.webp" },
+      { "id": "space-gray", "name": "Космічний сірий", "hex": "#5d5e62", "image": "assets/images/macbook-air-m2/space-gray.webp" },
+      { "id": "silver",     "name": "Сріблястий",      "hex": "#e3e4e5", "image": "assets/images/macbook-air-m2/silver.webp" }
+    ],
+    "rating": 4.9,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-009",
+    "name": "MacBook Pro 14-inch (M3)",
+    "price": 1999,
+    "category": "Mac",
+    "brand": "Apple",
+    "images": [
+      "assets/images/macbook-pro-14.jpg",
+      "assets/images/macbook-pro-14-2.jpg",
+      "assets/images/macbook-pro-14-3.jpg"
+    ],
+    "specs": {
+      "cpu": "M3 chip",
+      "ram": "8 GB",
+      "storage": "512 GB"
+    },
+    "variants": [
+      { "ram": "8 GB", "storage": "512 GB", "price": 1999 },
+      { "ram": "16 GB", "storage": "1 TB", "price": 2199 },
+      { "ram": "24 GB", "storage": "1 TB", "price": 2299 }
+    ],
+    "colors": [
+      { "id": "black",  "name": "Чорний",   "hex": "#3c3d3a", "image": "assets/images/macbook-pro-14-2023-m3/black.webp" },
+      { "id": "space-gray", "name": "Космічний сірий", "hex": "#5d5e62", "image": "assets/images/macbook-pro-14-2023-m3/space-gray.webp" },
+      { "id": "silver",     "name": "Сріблястий",      "hex": "#e3e4e5", "image": "assets/images/macbook-pro-14-2023-m3/silver.webp" }
+    ],
+    "rating": 5.0,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-010",
+    "name": "MacBook Pro 16-inch (M3)",
+    "price": 2499,
+    "category": "Mac",
+    "brand": "Apple",
+    "images": [
+      "assets/images/macbook-pro-16.jpg",
+      "assets/images/macbook-pro-16-2.jpg",
+      "assets/images/macbook-pro-16-3.jpg"
+    ],
+    "specs": {
+      "cpu": "M3 Max chip",
+      "ram": "18 GB",
+      "storage": "512 GB"
+    },
+    "variants": [
+      { "ram": "18 GB", "storage": "512 GB", "price": 2499 },
+      { "ram": "36 GB", "storage": "512 GB", "price": 2699 },
+      { "ram": "32 GB", "storage": "1 TB", "price": 2899 },
+      { "ram": "48 GB", "storage": "1 TB", "price": 2899 }
+    ],
+    "colors": [
+      { "id": "space-black", "name": "Космічний чорний", "hex": "#2e3033", "image": "assets/images/macbook-pro-16-2023-m3-max/space-black.webp" },
+      { "id": "silver",      "name": "Сріблястий",       "hex": "#e3e4e5", "image": "assets/images/macbook-pro-16-2023-m3-max/silver.webp" }
+    ],
+    "rating": 5.0,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-011",
+    "name": "Apple Watch Series 9",
+    "price": 399,
+    "category": "Apple Watch",
+    "brand": "Apple",
+    "images": [
+      "assets/images/apple-watch-9.jpg",
+      "assets/images/apple-watch-9-2.jpg",
+      "assets/images/apple-watch-9-3.jpg"
+    ],
+    "specs": {
+      "cpu": "S9 SiP",
+      "ram": "2 GB",
+      "storage": "64 GB"
+    },
+    "rating": 4.8,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-012",
+    "name": "Apple Watch Ultra",
+    "price": 799,
+    "category": "Apple Watch",
+    "brand": "Apple",
+    "images": [
+      "assets/images/apple-watch-ultra.jpg",
+      "assets/images/apple-watch-ultra-2.jpg",
+      "assets/images/apple-watch-ultra-3.jpg"
+    ],
+    "specs": {
+      "cpu": "S9 SiP",
+      "ram": "2 GB",
+      "storage": "32 GB"
+    },
+    "rating": 4.9,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-013",
+    "name": "Apple Watch SE (2nd Gen)",
+    "price": 249,
+    "category": "Apple Watch",
+    "brand": "Apple",
+    "images": [
+      "assets/images/apple-watch-se.jpg",
+      "assets/images/apple-watch-se-2.jpg",
+      "assets/images/apple-watch-se-3.jpg"
+    ],
+    "specs": {
+      "cpu": "S8 SiP",
+      "ram": "1 GB",
+      "storage": "32 GB"
+    },
+    "rating": 4.7,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-014",
+    "name": "AirPods Pro (2nd Gen)",
+    "price": 249,
+    "category": "AirPods",
+    "brand": "Apple",
+    "images": [
+      "assets/images/airpods-pro-2.jpg",
+      "assets/images/airpods-pro-2-2.jpg",
+      "assets/images/airpods-pro-2-3.jpg"
+    ],
+    "specs": {
+      "cpu": "H2 chip",
+      "ram": "N/A",
+      "storage": "N/A"
+    },
+    "rating": 4.8,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-015",
+    "name": "AirPods (3rd Gen)",
+    "price": 169,
+    "category": "AirPods",
+    "brand": "Apple",
+    "images": [
+      "assets/images/airpods-3.jpg",
+      "assets/images/airpods-3-2.jpg",
+      "assets/images/airpods-3-3.jpg"
+    ],
+    "specs": {
+      "cpu": "H1 chip",
+      "ram": "N/A",
+      "storage": "N/A"
+    },
+    "rating": 4.6,
+    "year": 2021,
+    "available": true
+  },
+  {
+    "id": "prod-016",
+    "name": "AirPods Max",
+    "price": 549,
+    "category": "AirPods",
+    "brand": "Apple",
+    "images": [
+      "assets/images/airpods-max.jpg",
+      "assets/images/airpods-max-2.jpg",
+      "assets/images/airpods-max-3.jpg"
+    ],
+    "specs": {
+      "cpu": "H1 chip",
+      "ram": "N/A",
+      "storage": "N/A"
+    },
+    "rating": 4.9,
+    "year": 2020,
+    "available": true
+  },
+  {
+    "id": "prod-017",
+    "name": "Apple Watch Ultra 2",
+    "price": 899,
+    "category": "Apple Watch",
+    "brand": "Apple",
+    "images": [
+      "assets/images/apple-watch-ultra-2-1.jpg",
+      "assets/images/apple-watch-ultra-2-2.jpg",
+      "assets/images/apple-watch-ultra-2-3.jpg"
+    ],
+    "specs": {
+      "cpu": "S9 SiP",
+      "ram": "2 GB",
+      "storage": "64 GB"
+    },
+    "rating": 5.0,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-018",
+    "name": "iPad",
+    "price": 499,
+    "category": "iPad",
+    "brand": "Apple",
+    "images": [
+      "assets/images/ipad-10.jpg",
+      "assets/images/ipad-10-2.jpg",
+      "assets/images/ipad-10-3.jpg"
+    ],
+    "specs": {
+      "cpu": "A16 Bionic chip",
+      "ram": "6 GB",
+      "storage": "128 GB"
+    },
+    "variants": [
+      { "ram": "6 GB", "storage": "128 GB", "price": 499 },
+      { "ram": "6 GB", "storage": "256 GB", "price": 629 },
+      { "ram": "6 GB", "storage": "512 GB", "price": 879 }
+    ],
+    "colors": [
+      { "id": "silver", "name": "Сріблястий", "hex": "#e3e4e6", "image": "assets/images/ipad-11/silver.webp" },
+      { "id": "blue",   "name": "Синій",      "hex": "#a4cde7", "image": "assets/images/ipad-11/blue.webp" },
+      { "id": "pink",   "name": "Рожевий",    "hex": "#faadb8", "image": "assets/images/ipad-11/pink.webp" },
+      { "id": "yellow", "name": "Жовтий",     "hex": "#fbd76c", "image": "assets/images/ipad-11/yellow.webp" }
+    ],
+    "rating": 4.7,
+    "year": 2025,
+    "available": true
+  },
+  {
+    "id": "prod-019",
+    "name": "Apple Watch Series 8",
+    "price": 399,
+    "category": "Apple Watch",
+    "brand": "Apple",
+    "images": [
+      "assets/images/apple-watch-8.jpg",
+      "assets/images/apple-watch-8-2.jpg",
+      "assets/images/apple-watch-8-3.jpg"
+    ],
+    "specs": {
+      "cpu": "S8 SiP",
+      "ram": "2 GB",
+      "storage": "32 GB"
+    },
+    "rating": 4.8,
+    "year": 2022,
+    "available": true
+  },
+  {
+    "id": "prod-020",
+    "name": "Mac mini (M2)",
+    "price": 599,
+    "category": "Mac",
+    "brand": "Apple",
+    "images": [
+      "assets/images/mac-mini-m2.jpg",
+      "assets/images/mac-mini-m2-2.jpg",
+      "assets/images/mac-mini-m2-3.jpg"
+    ],
+    "specs": {
+      "cpu": "M2 chip",
+      "ram": "8 GB",
+      "storage": "512 GB"
+    },
+    "variants": [
+      { "ram": "8 GB", "storage": "512 GB", "price": 599 }
+    ],
+    "rating": 4.9,
+    "year": 2023,
+    "available": true
+  },
+
+  {
+    "id": "prod-021",
+    "name": "Belkin BoostCharge Pro MagSafe Charger",
+    "price": 49,
+    "category": "Accessories",
+    "brand": "Belkin",
+    "images": [
+      "assets/images/belkin-magsafe.jpg",
+      "assets/images/belkin-magsafe-2.jpg",
+      "assets/images/belkin-magsafe-3.jpg"
+    ],
+    "specs": { "cpu": "MagSafe compatible", "ram": "N/A", "storage": "15W output" },
+    "rating": 4.6,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-022",
+    "name": "Belkin USB-C to Lightning Cable",
+    "price": 25,
+    "category": "Accessories",
+    "brand": "Belkin",
+    "images": [
+      "assets/images/belkin-cable.jpg",
+      "assets/images/belkin-cable-2.jpg",
+      "assets/images/belkin-cable-3.jpg"
+    ],
+    "specs": { "cpu": "Fast charging", "ram": "N/A", "storage": "1m length" },
+    "rating": 4.5,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-023",
+    "name": "Belkin 3-in-1 Wireless Charging Pad",
+    "price": 129,
+    "category": "Accessories",
+    "brand": "Belkin",
+    "images": [
+      "assets/images/belkin-3in1.jpg",
+      "assets/images/belkin-3in1-2.jpg",
+      "assets/images/belkin-3in1-3.jpg"
+    ],
+    "specs": { "cpu": "Qi wireless", "ram": "N/A", "storage": "iPhone + Watch + AirPods" },
+    "rating": 4.7,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-024",
+    "name": "Anker PowerCore 20000 Power Bank",
+    "price": 55,
+    "category": "Accessories",
+    "brand": "Anker",
+    "images": [
+      "assets/images/anker-powercore.jpg",
+      "assets/images/anker-powercore-2.jpg",
+      "assets/images/anker-powercore-3.jpg"
+    ],
+    "specs": { "cpu": "20000 mAh", "ram": "N/A", "storage": "USB-C PD" },
+    "rating": 4.8,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-025",
+    "name": "Anker 65W USB-C Charger",
+    "price": 39,
+    "category": "Accessories",
+    "brand": "Anker",
+    "images": [
+      "assets/images/anker-charger.jpg",
+      "assets/images/anker-charger-2.jpg",
+      "assets/images/anker-charger-3.jpg"
+    ],
+    "specs": { "cpu": "GaN technology", "ram": "N/A", "storage": "65W output" },
+    "rating": 4.7,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-026",
+    "name": "Anker Soundcore Life Q30 Headphones",
+    "price": 79,
+    "category": "Accessories",
+    "brand": "Anker",
+    "images": [
+      "assets/images/anker-soundcore-q30.jpg",
+      "assets/images/anker-soundcore-q30-2.jpg",
+      "assets/images/anker-soundcore-q30-3.jpg"
+    ],
+    "specs": { "cpu": "Active noise cancelling", "ram": "N/A", "storage": "40h battery" },
+    "rating": 4.6,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-027",
+    "name": "Logitech MX Master 3S Mouse",
+    "price": 99,
+    "category": "Accessories",
+    "brand": "Logitech",
+    "images": [
+      "assets/images/logitech-mx-master-3s.jpg",
+      "assets/images/logitech-mx-master-3s-2.jpg",
+      "assets/images/logitech-mx-master-3s-3.jpg"
+    ],
+    "specs": { "cpu": "8K DPI sensor", "ram": "N/A", "storage": "Bluetooth + USB" },
+    "rating": 4.9,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-028",
+    "name": "Logitech MX Keys Keyboard",
+    "price": 109,
+    "category": "Accessories",
+    "brand": "Logitech",
+    "images": [
+      "assets/images/logitech-mx-keys.jpg",
+      "assets/images/logitech-mx-keys-2.jpg",
+      "assets/images/logitech-mx-keys-3.jpg"
+    ],
+    "specs": { "cpu": "Backlit keys", "ram": "N/A", "storage": "Multi-device" },
+    "rating": 4.8,
+    "year": 2023,
+    "available": true
+  },
+  {
+    "id": "prod-029",
+    "name": "Logitech StreamCam",
+    "price": 149,
+    "category": "Accessories",
+    "brand": "Logitech",
+    "images": [
+      "assets/images/logitech-streamcam.jpg",
+      "assets/images/logitech-streamcam-2.jpg",
+      "assets/images/logitech-streamcam-3.jpg"
+    ],
+    "specs": { "cpu": "1080p 60fps", "ram": "N/A", "storage": "USB-C" },
+    "rating": 4.5,
+    "year": 2023,
+    "available": true
+  }
+]

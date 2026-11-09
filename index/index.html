@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Store — Головна</title>
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (однакова розмітка на кожній сторінці) ===== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a href="../index/index.html" class="logo">
+        <img src="../assets/images/apple-logo.svg" alt="Apple Store" class="logo__icon">
+        <span class="logo__text">Apple Store</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="../index/index.html" class="main-nav__link is-active">Home</a>
+        <a href="../catalog/catalog.html" class="main-nav__link">Catalog</a>
+        <a href="../catalog/catalog.html?category=iPhone" class="main-nav__link">iPhone</a>
+        <a href="../catalog/catalog.html?category=Mac" class="main-nav__link">Mac</a>
+        <a href="../catalog/catalog.html?category=iPad" class="main-nav__link">iPad</a>
+        <a href="../catalog/catalog.html?category=Apple+Watch" class="main-nav__link">Watch</a>
+        <a href="../catalog/catalog.html?category=AirPods" class="main-nav__link">AirPods</a>
+        <a href="../news/news.html" class="main-nav__link">News</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" data-search-toggle aria-label="Search">
+          <img src="../assets/images/icon-search.svg" alt="">
+        </button>
+        <input type="search" class="header-search-input" data-search-input placeholder="Search products...">
+        <a href="../favorites/favorites.html" class="icon-btn cart-btn" data-favorites-link aria-label="Favorites">
+          <img src="../assets/images/icon-heart.svg" alt="">
+          <span class="cart-badge" data-favorites-count hidden>0</span>
+        </a>
+        <a href="../cart/cart.html" class="icon-btn cart-btn" aria-label="Cart">
+          <img src="../assets/images/icon-cart.svg" alt="">
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <a href="../auth/auth.html" class="icon-btn" data-account-link aria-label="Account">
+          <img src="../assets/images/icon-user.svg" alt="">
+        </a>
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <img src="../assets/images/icon-theme.svg" alt="">
+        </button>
+        <button class="icon-btn menu-btn" data-menu-toggle aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Мобільне меню (ховане за замовчуванням, керується header.js) -->
+    <nav class="mobile-menu" data-mobile-menu>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="../news/news.html">News</a>
+      <a href="../cart/cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero container">
+      <div class="hero__grid">
+        <div class="hero__promo" data-hero-slider>
+          <div class="hero__track" data-hero-track>
+            <!-- слайди підставляються з index.js -->
+          </div>
+          <div class="hero__dots" data-hero-dots></div>
+        </div>
+
+        <div class="hero__banner">
+          <h2 class="hero__banner-title">Upgrade your Apple experience.</h2>
+          <p class="hero__banner-text">Free delivery on orders over €500.</p>
+          <a href="../catalog/catalog.html" class="btn btn--dark">Shop now</a>
+          <img src="../assets/images/hero-banner-devices.png" alt="Apple devices" class="hero__banner-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES BAR (світла) ===== -->
+    <section class="features-bar container">
+      <div class="feature-item">
+        <img src="../assets/images/icon-shield.svg" alt="">
+        <div>
+          <strong>Official products</strong>
+          <span>100% original Apple products</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="../assets/images/icon-delivery.svg" alt="">
+        <div>
+          <strong>Fast delivery</strong>
+          <span>Delivery in 1–3 business days</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="../assets/images/icon-warranty.svg" alt="">
+        <div>
+          <strong>2-year warranty</strong>
+          <span>Apple official warranty</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="../assets/images/icon-payment.svg" alt="">
+        <div>
+          <strong>Secure payment</strong>
+          <span>Safe & encrypted payments</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES BAR (темна) ===== -->
+    <section class="features-bar features-bar--dark container">
+      <div class="feature-item">
+        <img src="../assets/images/icon-apple.svg" alt="">
+        <div>
+          <strong>Apple quality</strong>
+          <span>Premium materials</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="../assets/images/icon-innovation.svg" alt="">
+        <div>
+          <strong>Innovation</strong>
+          <span>Cutting-edge tech</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="../assets/images/icon-eco.svg" alt="">
+        <div>
+          <strong>Eco friendly</strong>
+          <span>Better for the planet</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="../assets/images/icon-trust.svg" alt="">
+        <div>
+          <strong>Trusted by millions</strong>
+          <span>Worldwide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SHOP BY CATEGORY (дані з categories.json через index.js) ===== -->
+    <section class="section container">
+      <div class="section__header">
+        <h2>Shop by category</h2>
+        <a href="../catalog/catalog.html" class="link-view-all">View all</a>
+      </div>
+      <div class="category-grid" data-categories-grid>
+        <!-- підставляється з index.js -->
+      </div>
+    </section>
+
+    <!-- ===== BEST SELLERS (дані з products.json) ===== -->
+    <section class="section container">
+      <div class="section__header">
+        <h2>Best sellers</h2>
+        <a href="../catalog/catalog.html" class="link-view-all">View all</a>
+      </div>
+      <div class="product-grid" data-bestsellers-grid>
+        <!-- підставляється з index.js -->
+      </div>
+    </section>
+
+    <!-- ===== LATEST NEWS (дані з news.json) ===== -->
+    <section class="section container">
+      <div class="section__header">
+        <h2>Latest news</h2>
+        <a href="../news/news.html" class="link-view-all">View all</a>
+      </div>
+      <div class="news-grid" data-news-grid>
+        <!-- підставляється з index.js -->
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section class="section container">
+      <div class="section__header">
+        <h2>Featured products</h2>
+        <a href="../catalog/catalog.html" class="link-view-all">View all</a>
+      </div>
+      <div class="product-grid" data-featured-grid>
+        <!-- підставляється з index.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (однакова розмітка на кожній сторінці) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="footer-col footer-col--brand">
+        <div class="logo">
+          <img src="../assets/images/apple-logo-white.svg" alt="" class="logo__icon">
+          <span class="logo__text">Apple Store</span>
+        </div>
+        <p>Your destination for everything Apple. Premium products. Excellent service.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><img src="../assets/images/icon-instagram.svg" alt=""></a>
+          <a href="#" aria-label="YouTube"><img src="../assets/images/icon-youtube.svg" alt=""></a>
+          <a href="#" aria-label="TikTok"><img src="../assets/images/icon-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Shop</h3>
+        <a href="../catalog/catalog.html?category=iPhone">iPhone</a>
+        <a href="../catalog/catalog.html?category=Mac">Mac</a>
+        <a href="../catalog/catalog.html?category=iPad">iPad</a>
+        <a href="../catalog/catalog.html?category=Apple+Watch">Apple Watch</a>
+        <a href="../catalog/catalog.html?category=AirPods">AirPods</a>
+        <a href="../catalog/catalog.html?category=Accessories">Accessories</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Information</h3>
+        <a href="#">About us</a>
+        <a href="#">Delivery</a>
+        <a href="#">Warranty</a>
+        <a href="#">Payment</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Support</h3>
+        <a href="#">Contact</a>
+        <a href="#">Returns</a>
+        <a href="#">Service</a>
+        <a href="#">Track order</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Account</h3>
+        <a href="#">My account</a>
+        <a href="#">Orders</a>
+        <a href="#">Favorites</a>
+        <a href="../cart/cart.html">Cart</a>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <span>© 2026 Apple Store. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>

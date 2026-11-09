@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cat-001",
+    "name": "iPhone",
+    "description": "The ultimate smartphone experience with high-performance and stunning cameras.",
+    "image": "assets/images/category-iphone.jpg"
+  },
+  {
+    "id": "cat-002",
+    "name": "Mac",
+    "description": "Powerful computers for professionals and creatives.",
+    "image": "assets/images/category-mac.jpg"
+  },
+  {
+    "id": "cat-003",
+    "name": "iPad",
+    "description": "The ultimate tablet for productivity, creativity, and entertainment.",
+    "image": "assets/images/category-ipad.jpg"
+  },
+  {
+    "id": "cat-004",
+    "name": "Apple Watch",
+    "description": "The most advanced wearable for fitness, health, and connectivity.",
+    "image": "assets/images/category-applewatch.jpg"
+  },
+  {
+    "id": "cat-005",
+    "name": "AirPods",
+    "description": "Experience the magic of high-quality audio with seamless connectivity.",
+    "image": "assets/images/category-airpods.jpg"
+  },
+  {
+    "id": "cat-006",
+    "name": "Accessories",
+    "description": "Enhance your Apple ecosystem with premium accessories and gear.",
+    "image": "assets/images/category-accessories.jpg"
+  }
+]

@@ -1,0 +1,100 @@
+/* ===== NEWS PAGE ===== */
+.news-page {
+  padding: 32px 24px 64px;
+}
+
+.news-page-header {
+  margin-bottom: 32px;
+}
+
+.news-page-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.news-page-header p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+/* Робимо картки клікабельними (news-grid стилі вже є в global.css, тут — тільки курсор) */
+.news-grid [data-news-id] {
+  cursor: pointer;
+}
+
+/* ===== NEWS MODAL ===== */
+.news-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-modal[hidden] {
+  display: none;
+}
+
+.news-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.news-modal__content {
+  position: relative;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 560px;
+  width: calc(100% - 48px);
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.news-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.news-modal__close:hover {
+  background: var(--color-bg-secondary);
+}
+
+.news-modal__meta {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+.news-modal__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-right: 24px;
+}
+
+.news-modal__body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Блокуємо скрол сторінки, коли модалка відкрита */
+body.modal-open {
+  overflow: hidden;
+}

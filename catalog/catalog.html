@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Store — Catalog</title>
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (та сама розмітка, що на index.html) ===== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a href="../index/index.html" class="logo">
+        <img src="../assets/images/apple-logo.svg" alt="Apple Store" class="logo__icon">
+        <span class="logo__text">Apple Store</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="../index/index.html" class="main-nav__link">Home</a>
+        <a href="../catalog/catalog.html" class="main-nav__link is-active">Catalog</a>
+        <a href="../catalog/catalog.html?category=iPhone" class="main-nav__link">iPhone</a>
+        <a href="../catalog/catalog.html?category=Mac" class="main-nav__link">Mac</a>
+        <a href="../catalog/catalog.html?category=iPad" class="main-nav__link">iPad</a>
+        <a href="../catalog/catalog.html?category=Apple+Watch" class="main-nav__link">Watch</a>
+        <a href="../catalog/catalog.html?category=AirPods" class="main-nav__link">AirPods</a>
+        <a href="../news/news.html" class="main-nav__link">News</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" data-search-toggle aria-label="Search">
+          <img src="../assets/images/icon-search.svg" alt="">
+        </button>
+        <input type="search" class="header-search-input" data-search-input placeholder="Search products...">
+        <a href="../favorites/favorites.html" class="icon-btn cart-btn" data-favorites-link aria-label="Favorites">
+          <img src="../assets/images/icon-heart.svg" alt="">
+          <span class="cart-badge" data-favorites-count hidden>0</span>
+        </a>
+        <a href="../cart/cart.html" class="icon-btn cart-btn" aria-label="Cart">
+          <img src="../assets/images/icon-cart.svg" alt="">
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+        <a href="../auth/auth.html" class="icon-btn" data-account-link aria-label="Account">
+          <img src="../assets/images/icon-user.svg" alt="">
+        </a>
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <img src="../assets/images/icon-theme.svg" alt="">
+        </button>
+        <button class="icon-btn menu-btn" data-menu-toggle aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" data-mobile-menu>
+      <a href="../catalog/catalog.html">Catalog</a>
+      <a href="../news/news.html">News</a>
+      <a href="../cart/cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main class="container catalog-page">
+    <div class="catalog-header">
+      <h1>Catalog</h1>
+      <span class="catalog-count" data-results-count></span>
+    </div>
+
+    <div class="catalog__toolbar">
+      <input
+        type="search"
+        class="search-input"
+        placeholder="Search products..."
+        data-filter-search
+      >
+      <button class="filters-toggle" type="button">Фільтри</button>
+    </div>
+
+    <div class="filters-overlay" hidden></div>
+
+    <div class="catalog-layout">
+      <!-- ===== SIDEBAR: ФІЛЬТРИ ===== -->
+      <aside class="filters" id="filtersPanel">
+        <button class="filters-close" type="button" aria-label="Закрити">✕</button>
+        <div class="filter-group">
+          <h3>Category</h3>
+          <div data-filter-categories>
+            <!-- checkboxes підставляються з catalog.js -->
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Brand</h3>
+          <div data-filter-brands>
+            <!-- checkboxes підставляються з catalog.js -->
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Year</h3>
+          <div data-filter-years>
+            <!-- checkboxes підставляються з catalog.js -->
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Price</h3>
+          <div class="price-range">
+            <input type="number" placeholder="Min" data-filter-price-min>
+            <span>—</span>
+            <input type="number" placeholder="Max" data-filter-price-max>
+          </div>
+        </div>
+
+        <button class="btn btn--outline filter-reset" data-filter-reset>Reset filters</button>
+      </aside>
+
+      <!-- ===== ГОЛОВНА ЧАСТИНА: СОРТУВАННЯ + СІТКА ===== -->
+      <div class="catalog-main">
+        <div class="catalog-toolbar">
+          <select class="sort-select" data-sort-select>
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating-desc">Rating: High to Low</option>
+            <option value="name-asc">Name: A–Z</option>
+          </select>
+        </div>
+
+        <div class="product-grid" data-catalog-grid>
+          <!-- картки товарів підставляються з catalog.js -->
+        </div>
+
+        <p class="catalog-empty" data-catalog-empty hidden>No products match your filters.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (та сама розмітка, що на index.html) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="footer-col footer-col--brand">
+        <div class="logo">
+          <img src="../assets/images/apple-logo-white.svg" alt="" class="logo__icon">
+          <span class="logo__text">Apple Store</span>
+        </div>
+        <p>Your destination for everything Apple. Premium products. Excellent service.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><img src="../assets/images/icon-instagram.svg" alt=""></a>
+          <a href="#" aria-label="YouTube"><img src="../assets/images/icon-youtube.svg" alt=""></a>
+          <a href="#" aria-label="TikTok"><img src="../assets/images/icon-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Shop</h3>
+        <a href="../catalog/catalog.html?category=iPhone">iPhone</a>
+        <a href="../catalog/catalog.html?category=Mac">Mac</a>
+        <a href="../catalog/catalog.html?category=iPad">iPad</a>
+        <a href="../catalog/catalog.html?category=Apple+Watch">Apple Watch</a>
+        <a href="../catalog/catalog.html?category=AirPods">AirPods</a>
+        <a href="../catalog/catalog.html?category=Accessories">Accessories</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Information</h3>
+        <a href="#">About us</a>
+        <a href="#">Delivery</a>
+        <a href="#">Warranty</a>
+        <a href="#">Payment</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Support</h3>
+        <a href="#">Contact</a>
+        <a href="#">Returns</a>
+        <a href="#">Service</a>
+        <a href="#">Track order</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Account</h3>
+        <a href="#">My account</a>
+        <a href="#">Orders</a>
+        <a href="#">Favorites</a>
+        <a href="../cart/cart.html">Cart</a>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <span>© 2026 Apple Store. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String   // зберігається хешованим через bcrypt, ніколи у відкритому вигляді
+  createdAt DateTime @default(now())
+  orders    Order[]
+}
+
+model Order {
+  id        String      @id @default(uuid())
+  userId    String
+  user      User        @relation(fields: [userId], references: [id])
+  total     Float
+  createdAt DateTime    @default(now())
+  items     OrderItem[]
+}
+
+model OrderItem {
+  id             String  @id @default(uuid())
+  orderId        String
+  order          Order   @relation(fields: [orderId], references: [id])
+  productId      String
+  productName    String
+  quantity       Int
+  price          Float
+  variantStorage String?
+  variantRam     String?
+}

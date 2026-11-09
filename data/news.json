@@ -1,0 +1,66 @@
+[
+  {
+    "id": "news-1",
+    "title": "Apple Announces New AI Integration in iOS",
+    "images": "assets/images/apple_ai_ios.jpg",
+    "content": "Apple has unveiled significant AI updates to iOS, focusing on personal intelligence and seamless device interaction.",
+    "date": "2026-08-20",
+    "category": "Technology"
+  },
+  {
+    "id": "news-2",
+    "title": "The Future of Foldable Displays in Smartphones",
+    "images": "assets/images/foldable_displays.jpg",
+    "content": "Industry experts discuss the next generation of foldable screens and the durability improvements expected in 2026.",
+    "date": "2026-08-21",
+    "category": "Technology"
+  },
+  {
+    "id": "news-3",
+    "title": "New M4 Chip Sets to Power Next-Gen MacBooks",
+    "images": "assets/images/m4_chip_macbooks.jpg",
+    "content": "Rumors circulate about the upcoming M4 chip, promising even greater efficiency and performance for creative workflows.",
+    "date": "2026-08-22",
+    "category": "Technology"
+  },
+  {
+    "id": "news-4",
+    "title": "Smartwatches and Health Tracking: A New Frontier",
+    "images": "assets/images/smartwatches_health_tracking.jpg",
+    "content": "Latest wearable tech is pushing boundaries in real-time health monitoring and proactive medical alerts.",
+    "date": "2026-08-23",
+    "category": "Health Tech"
+  },
+  {
+    "id": "news-5",
+    "title": "Consumer Electronics Trends for 2026",
+    "images": "assets/images/consumer_electronics_2026.jpg",
+    "content": "From smart home hubs to advanced audio gear, here's what to expect in the consumer electronics market.",
+    "date": "2026-08-24",
+    "category": "Technology"
+  },
+  {
+    "id": "news-6",
+    "title": "The Rise of AI-Driven Personal Assistants",
+    "images": "assets/images/ai_personal_assistants.jpg",
+    "content": "Explore how generative AI is transforming the way we interact with our devices and personal software.",
+    "date": "2026-08-25",
+    "category": "Technology"
+  },
+  {
+    "id": "news-7",
+    "title": "Sustainable Manufacturing in Tech",
+    "images": "assets/images/sustainable_manufacturing.jpg",
+    "content": "Leading tech brands are shifting towards carbon-neutral manufacturing processes and recycled materials.",
+    "date": "2026-08-26",
+    "category": "Sustainability"
+  },
+  {
+    "id": "news-8",
+    "title": "Next-Gen Audio: Spatial Sound Everywhere",
+    "images": "assets/images/next_gen_audio.jpg",
+    "content": "Spatial audio is becoming the standard, with new headphones offering immersive experiences across all platforms.",
+    "date": "2026-08-27",
+    "category": "Technology"
+  }
+]

@@ -1,0 +1,26 @@
+/* ===== FAVORITES PAGE ===== */
+.favorites-page {
+  padding: 32px 24px 64px;
+}
+
+.favorites-page__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+/* ===== EMPTY STATE ===== */
+.favorites-empty {
+  text-align: center;
+  padding: 96px 24px;
+}
+
+.favorites-empty p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.favorites-empty .btn {
+  display: inline-flex;
+}

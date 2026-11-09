@@ -1,0 +1,82 @@
+/* ===== BRANDS PAGE ===== */
+.brands-page {
+  padding: 32px 24px 64px;
+}
+
+.brands-header {
+  margin-bottom: 32px;
+}
+
+.brands-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.brands-header p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+/* ===== BRAND CARD ===== */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.brand-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.brand-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.brand-card__logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.brand-card__body {
+  flex: 1;
+}
+
+.brand-card__name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.brand-card__description {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.brand-card__count {
+  font-size: 13px;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+}

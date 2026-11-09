@@ -1,0 +1,22 @@
+[
+  {
+    "id": "brand-001",
+    "name": "Apple",
+    "description": "Innovative technology and premium products."
+  },
+  {
+    "id": "brand-002",
+    "name": "Belkin",
+    "description": "Premium accessories for your mobile life."
+  },
+  {
+    "id": "brand-003",
+    "name": "Anker",
+    "description": "High-performance charging and audio solutions."
+  },
+  {
+    "id": "brand-004",
+    "name": "Logitech",
+    "description": "Leading peripherals and accessories for work and play."
+  }
+]

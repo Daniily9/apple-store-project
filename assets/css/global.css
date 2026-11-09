@@ -1,0 +1,811 @@
+/* ===== CSS RESET & VARIABLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Кольори (light theme за замовчуванням) */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f5f5f7;
+  --color-text: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-border: #d2d2d7;
+  --color-accent: #0071e3;
+  --color-dark: #1d1d1f;
+  --color-dark-secondary: #2d2d2f;
+
+  /* Типографіка */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Розміри */
+  --container-width: 1280px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* Тіні */
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme {
+  --color-bg: #000000;
+  --color-bg-secondary: #1d1d1f;
+  --color-text: #f5f5f7;
+  --color-text-secondary: #a1a1a6;
+  --color-border: #3d3d3f;
+  --color-dark: #f5f5f7;
+  --color-dark-secondary: #f5f5f7;
+}
+
+/* ===== ПЛАВНИЙ ПЕРЕХІД МІЖ ТЕМАМИ ===== */
+/* Застосовуємо transition тільки на кольорові властивості до всіх елементів,
+   що використовують CSS-змінні теми — це не заважає іншим анімаціям (hover, transform) */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  color: inherit; /* без цього текст кнопок завжди чорний, незалежно від теми */
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--dark {
+  background: var(--color-dark);
+  color: var(--color-bg);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.logo__icon {
+  width: 22px;
+  height: 22px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+
+.main-nav__link {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.main-nav__link:hover,
+.main-nav__link.is-active {
+  color: var(--color-text);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: var(--color-bg-secondary);
+}
+
+.icon-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== HEADER SEARCH (input + dropdown підказок) ===== */
+.header-search-wrapper {
+  position: relative;
+}
+
+.header-search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  border-radius: 980px;
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-size: 14px;
+  opacity: 0;
+  transition: width 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+}
+
+/* Прибираємо нативний хрестик очищення в Chrome/Edge/Safari для type="search" */
+.header-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.header-search-input.is-open {
+  width: 200px;
+  padding: 8px 16px;
+  opacity: 1;
+  margin-right: 4px;
+}
+
+.header-search-input:focus {
+  outline: none;
+}
+
+.header-search-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 280px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-hover);
+  overflow: hidden;
+  z-index: 200;
+}
+
+.header-search-dropdown.is-open {
+  display: block;
+}
+
+.header-search-suggestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.header-search-suggestion:hover {
+  background: var(--color-bg-secondary);
+}
+
+.header-search-suggestion img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.header-search-suggestion span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.dark-theme .site-header .logo__icon,
+body.dark-theme .site-footer .logo__icon,
+body.dark-theme .icon-btn img,
+body.dark-theme .feature-item img,
+body.dark-theme .product-card__fav img,
+body.dark-theme .social-links img {
+  filter: invert(1);
+}
+
+.cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+
+.menu-btn.is-open {
+  transform: rotate(90deg);
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease, padding 0.3s ease;
+}
+
+.mobile-menu.is-open {
+  max-height: 300px; /* достатньо для 3 пунктів меню; збільш, якщо додаси більше посилань */
+  opacity: 1;
+  padding: 16px 24px;
+  transform: translateY(0);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 900px) {
+  .main-nav { display: none; }
+  .menu-btn { display: flex; }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 48px 0;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section__header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.link-view-all {
+  font-size: 14px;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ===== FEATURES BAR ===== */
+.features-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin: 24px auto;
+}
+
+.features-bar--dark {
+  background: var(--color-dark);
+  color: var(--color-bg);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-item img {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 14px;
+}
+
+.feature-item span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .features-bar { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== PRODUCT GRID & CARD (shared: index, catalog) ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 980px;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+}
+
+.product-card__add svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.product-card__add .icon-check {
+  display: none;
+}
+
+/* Активний стан (товар у кошику): інверсія кольорів кола —
+   світла тема: чорне коло + білий чекмарк; темна тема: біле коло + чорний чекмарк */
+.product-card__add.is-active {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.product-card__add.is-active .icon-plus {
+  display: none;
+}
+
+.product-card__add.is-active .icon-check {
+  display: block;
+}
+
+.product-card__fav {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  color: var(--color-text-secondary); /* колір контуру серця за замовчуванням */
+}
+
+.product-card__fav svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: fill 0.15s ease, stroke 0.15s ease;
+}
+
+.product-card__fav.is-active {
+  color: var(--color-text);
+}
+
+.product-card__fav.is-active svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.product-card__name {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.product-card__spec {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card__price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-card__add {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.product-card__add:hover {
+  background: var(--color-bg-secondary);
+}
+
+@media (max-width: 1100px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== CATEGORY GRID ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: block;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.category-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.category-card__image {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-card__image {
+  transform: scale(1.06);
+}
+
+.category-card__name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.category-card__price {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ===== NEWS GRID ===== */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.news-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+.news-card__meta {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.news-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.news-card__excerpt {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.news-card {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+}
+
+.news-card__image {
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-card__image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1100px) {
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: var(--color-dark);
+  color: var(--color-bg);
+  padding: 48px 0 0;
+  margin-top: 48px;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 32px;
+  padding-bottom: 32px;
+}
+
+.footer-col h3 {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: 10px;
+}
+
+.footer-col--brand p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 12px 0 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links img {
+  width: 18px;
+  height: 18px;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid var(--color-dark-secondary);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .site-footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #1d1d1f;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast--error { background: #ff3b30; }
+.toast--info { background: #0071e3; }
+
+/* ===== АНІМАЦІЯ ЗАВАНТАЖЕННЯ СТОРІНКИ ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header з'являється першим, трохи згори */
+.site-header {
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* Прямі секції всередині <main> — з невеликим наростаючим зсувом одна за одною */
+main > * {
+  animation: fadeInUp 0.6s ease both;
+}
+
+main > *:nth-child(1) { animation-delay: 0.05s; }
+main > *:nth-child(2) { animation-delay: 0.1s; }
+main > *:nth-child(3) { animation-delay: 0.15s; }
+main > *:nth-child(4) { animation-delay: 0.2s; }
+main > *:nth-child(5) { animation-delay: 0.25s; }
+main > *:nth-child(6) { animation-delay: 0.3s; }
+
+/* Картки товарів/категорій/новин — з'являються з невеликою затримкою по черзі,
+   спрацьовує навіть для карток, доданих пізніше через JS (напр. після фільтрації) */
+.product-card,
+.category-card,
+.news-card,
+.brand-card {
+  animation: fadeInUp 0.4s ease both;
+}
+
+.product-grid > *:nth-child(1),
+.category-grid > *:nth-child(1),
+.news-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.product-grid > *:nth-child(2),
+.category-grid > *:nth-child(2),
+.news-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.product-grid > *:nth-child(3),
+.category-grid > *:nth-child(3),
+.news-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.product-grid > *:nth-child(4),
+.category-grid > *:nth-child(4),
+.news-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.product-grid > *:nth-child(n+5),
+.category-grid > *:nth-child(n+5),
+.news-grid > *:nth-child(n+5) { animation-delay: 0.25s; }
+
+/* Footer підіймається останнім */
+.site-footer {
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+/* Повага до налаштувань доступності — вимикаємо анімацію, якщо користувач просить менше руху */
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  main > *,
+  .product-card,
+  .category-card,
+  .news-card,
+  .brand-card,
+  .site-footer {
+    animation: none;
+  }
+}
